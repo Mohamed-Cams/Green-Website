@@ -5,9 +5,9 @@ import { CanvasRevealEffect } from "./ui/CanvasRevealEffect";
 
 const Approach = () => {
   return (
-    <section className="w-full py-20">
+    <section className="w-full py-20" id="roadmap">
       <h1 className="heading">
-        My <span className="text-purple">approach</span>
+       <span className="text-green-700">Roadmap</span>
       </h1>
       {/* remove bg-white dark:bg-black */}
       <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4">
@@ -46,6 +46,19 @@ const Approach = () => {
           {/* Radial gradient for the cute fade */}
           {/* remove this one */}
           {/* <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" /> */}
+        </Card>
+        <Card
+          title="Development & Launch"
+          icon={<AceternityIcon order="Phase 3" />}
+          des="This is where the magic happens! Based on the approved design, 
+          I'll translate everything into functional code, building your website
+          from the ground up."
+        >
+          <CanvasRevealEffect
+            animationSpeed={3}
+            containerClassName="bg-sky-600 rounded-3xl overflow-hidden"
+            colors={[[125, 211, 252]]}
+          />
         </Card>
         <Card
           title="Development & Launch"
@@ -158,7 +171,7 @@ const AceternityIcon = ({ order }: { order: string }) => {
         />
         <span
           className="inline-flex h-full w-full cursor-pointer items-center 
-        justify-center rounded-full bg-slate-950 px-5 py-2 text-purple backdrop-blur-3xl font-bold text-2xl"
+        justify-center rounded-full bg-slate-950 px-5 py-2 text-green-700 backdrop-blur-3xl font-bold text-2xl"
         >
           {order}
         </span>
