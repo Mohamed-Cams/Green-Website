@@ -79,7 +79,10 @@ export const FloatingNav = ({
               "relative dark:text-neutral-50 items-center  flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
             )}
           >
-            <span className="block sm:hidden">{navItem.icon}</span>
+            {/* Affichage de l'icône depuis public/icons */}
+            {navItem.icon && (
+            <img src={navItem.icon} alt={navItem.name} className="w-8 h-8" />
+            )}
             {/* add !cursor-pointer */}
             {/* remove hidden sm:block for the mobile responsive */}
             <span className=" text-sm !cursor-pointer">{navItem.name}</span>

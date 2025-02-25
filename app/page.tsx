@@ -12,12 +12,10 @@ import { FloatingNav } from "@/components/ui/FloatingNavbar";
 
 const Home = () => {
   return (
-    <main className="relative bg-black flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
+    <main className="relative bg-black flex justify-center items-center flex-col overflow-x-hidden mx-auto sm:px-10 px-5">
       <div className="max-w-7xl w-full">
         <FloatingNav navItems={navItems} />
         <Hero />
-        <Grid />
-        <RecentProjects />
         <Experience />
         <Approach />
         <Footer />
